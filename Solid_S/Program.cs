@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Serilog;
+using System;
+using System.IO;
 
 namespace Solid_S
 {
@@ -6,7 +8,15 @@ namespace Solid_S
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //El principio de responsabilidad unica:
+            //Una clase o componente debe tener una sola responsabilidad unica, sencilla y concreta.
+
+            Beer beer = new Beer("paceña", "cbn");
+            BeerDB beerDb = new BeerDB(beer);
+            BeerRequest beerRequest= new BeerRequest(beer);
+
+            beerDb.Save();
+            beerRequest.Send();
         }
     }
 }
