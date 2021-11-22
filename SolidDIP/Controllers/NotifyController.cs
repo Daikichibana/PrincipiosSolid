@@ -13,7 +13,7 @@ namespace SolidDIP.Controllers
     public class NotifyController : ControllerBase
     {
         [HttpPost]
-        public void ChangePassword(string notificationType)
+        public string ChangePassword(string notificationType)
         {
             INotifier notifier = null;
 
@@ -31,7 +31,7 @@ namespace SolidDIP.Controllers
             }
 
             UserManager mgr = new UserManager(notifier);
-            mgr.ChangePassword("user1", "oldpwd", "newpwd");
+            return mgr.ChangePassword("user1", "oldpwd", "newpwd");
 
         }
     }

@@ -14,9 +14,9 @@ namespace SolidDIP.Models
             this.Notifier = notifier;
         }
 
-        public void ChangePassword(string username, string oldpwd, string newpwd)
+        public string ChangePassword(string username, string oldpwd, string newpwd)
         {
-            Notifier.Notify("Password was changed on " + DateTime.Now);
+            return Notifier.Notify($"La clave de {username} fue cambiada exitomente de {oldpwd} a {newpwd}.");
         }
     }
 }

@@ -7,6 +7,6 @@ namespace SolidDIP.Models
 {
     public interface INotifier
     {
-        public void Notify(string message);
+        public string Notify(string message);
     }
 }

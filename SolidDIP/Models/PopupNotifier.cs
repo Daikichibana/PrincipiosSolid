@@ -7,8 +7,9 @@ namespace SolidDIP.Models
 {
     public class PopupNotifier : INotifier
     {
-        public void Notify(string message)
+        public string Notify(string message)
         {
+            return "Se ha enviado correctamente la notificacion por PopoUp. " + message;
         }
     }
 }
