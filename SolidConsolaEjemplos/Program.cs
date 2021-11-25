@@ -9,6 +9,9 @@ namespace SolidConsolaEjemplos
         {
             SRPAntes();
             SRPDespues();
+            Console.WriteLine("-------------");
+            OCPAntes();
+            OCPDespues();
         }
 
 
@@ -35,5 +38,27 @@ namespace SolidConsolaEjemplos
 
             Console.WriteLine(factura.GetTotal());
         }
+
+
+        public static void OCPAntes()
+        {
+            OCP.Antes.DocumentoContable documentoContable = new OCP.Antes.DocumentoContable(DateTime.Now, 100, 1, OCP.Antes.TipoDocumentoContable.NotaCredito);
+            OCP.Antes.DocumentoContable documentoContable2 = new OCP.Antes.DocumentoContable(DateTime.Now, 200, 2, OCP.Antes.TipoDocumentoContable.Factura);
+
+            Console.WriteLine(documentoContable.Descripcion());
+            Console.WriteLine(documentoContable2.Descripcion());
+        }
+
+        public static void OCPDespues()
+        {
+            OCP.Despues.NotaCredito notaCredito = new OCP.Despues.NotaCredito(DateTime.Now,100,1);
+            OCP.Despues.Factura facturaCredito = new OCP.Despues.Factura(DateTime.Now,200,2);
+
+            Console.WriteLine(notaCredito.Descripcion());
+            Console.WriteLine(facturaCredito.Descripcion());
+        }
+
+
     }
+
 }
