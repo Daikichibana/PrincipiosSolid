@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidISP", "SolidISP\SolidI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidLSP", "SolidLSP\SolidLSP.csproj", "{F3FC2E7A-DCE0-4006-88B0-ADC98E9D3EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidDIP", "SolidDIP\SolidDIP.csproj", "{3AA8C282-38A0-47B5-BDF3-5C1662426F91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidDIP", "SolidDIP\SolidDIP.csproj", "{3AA8C282-38A0-47B5-BDF3-5C1662426F91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidConsolaEjemplos", "SolidConsolaEjemplos\SolidConsolaEjemplos.csproj", "{D12A6D7A-250A-4B65-B81F-E7094A899B96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3AA8C282-38A0-47B5-BDF3-5C1662426F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AA8C282-38A0-47B5-BDF3-5C1662426F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AA8C282-38A0-47B5-BDF3-5C1662426F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12A6D7A-250A-4B65-B81F-E7094A899B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12A6D7A-250A-4B65-B81F-E7094A899B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12A6D7A-250A-4B65-B81F-E7094A899B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12A6D7A-250A-4B65-B81F-E7094A899B96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
