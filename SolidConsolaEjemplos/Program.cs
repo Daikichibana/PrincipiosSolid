@@ -15,6 +15,9 @@ namespace SolidConsolaEjemplos
             Console.WriteLine("-------------");
             LSPAntes();
             LSPDespues();
+            Console.WriteLine("-------------");
+            ISPAntes();
+            ISPDespues();
         }
 
 
@@ -85,6 +88,29 @@ namespace SolidConsolaEjemplos
 
         }
 
+        public static void ISPAntes()
+        {
+            ISP.Antes.Factura factura = new ISP.Antes.Factura(DateTime.Now, 1);
+            ISP.Antes.FacturaElectronica facturaElectronica = new ISP.Antes.FacturaElectronica(DateTime.Now, 1, "cae");
+
+            factura.EnviarPorEmail();
+            factura.Imprimir();
+
+            facturaElectronica.EnviarPorEmail();
+            facturaElectronica.Imprimir();
+        }
+
+        public static void ISPDespues()
+        {
+            ISP.Despues.Factura factura = new ISP.Despues.Factura(DateTime.Now, 1);
+            ISP.Despues.FacturaElectronica facturaElectronica = new ISP.Despues.FacturaElectronica(DateTime.Now, 1, "cae");
+
+            //factura.EnviarPorEmail();
+            factura.Imprimir();
+
+            facturaElectronica.EnviarPorEmail();
+            facturaElectronica.Imprimir();
+        }
 
     }
 
