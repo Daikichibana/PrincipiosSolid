@@ -12,6 +12,9 @@ namespace SolidConsolaEjemplos
             Console.WriteLine("-------------");
             OCPAntes();
             OCPDespues();
+            Console.WriteLine("-------------");
+            LSPAntes();
+            LSPDespues();
         }
 
 
@@ -39,7 +42,6 @@ namespace SolidConsolaEjemplos
             Console.WriteLine(factura.GetTotal());
         }
 
-
         public static void OCPAntes()
         {
             OCP.Antes.DocumentoContable documentoContable = new OCP.Antes.DocumentoContable(DateTime.Now, 100, 1, OCP.Antes.TipoDocumentoContable.NotaCredito);
@@ -56,6 +58,31 @@ namespace SolidConsolaEjemplos
 
             Console.WriteLine(notaCredito.Descripcion());
             Console.WriteLine(facturaCredito.Descripcion());
+        }
+
+        public static void LSPAntes()
+        {
+            LSP.Antes.Impresora impresora = new LSP.Antes.Impresora();
+            LSP.Antes.Remito remito = new LSP.Antes.Remito(DateTime.Now, 1, 100);
+            LSP.Antes.Factura factura = new LSP.Antes.Factura(DateTime.Now, 1);
+            LSP.Antes.NotaCredito notaCredito = new LSP.Antes.NotaCredito(DateTime.Now, 1);
+
+            impresora.ImprimirRemito(remito);
+            impresora.ImprimirFactura(factura);
+            impresora.ImprimirNotaCredito(notaCredito);
+        }
+
+        public static void LSPDespues()
+        {
+            LSP.Despues.Impresora impresora = new LSP.Despues.Impresora();
+            LSP.Despues.Remito remito = new LSP.Despues.Remito(DateTime.Now, 1, 100);
+            LSP.Despues.Factura factura = new LSP.Despues.Factura(DateTime.Now, 1);
+            LSP.Despues.NotaCredito notaCredito = new LSP.Despues.NotaCredito(DateTime.Now, 1);
+
+            impresora.ImprimirRemito(remito);
+            impresora.Imprimir(factura);
+            impresora.Imprimir(notaCredito);
+
         }
 
 
