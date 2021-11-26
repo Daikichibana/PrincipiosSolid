@@ -8,16 +8,29 @@ namespace SolidConsolaEjemplos
         static void Main(string[] args)
         {
             SRPAntes();
+            Console.WriteLine("-------------");
             SRPDespues();
             Console.WriteLine("-------------");
+
             OCPAntes();
+            Console.WriteLine("-------------");
             OCPDespues();
             Console.WriteLine("-------------");
+
             LSPAntes();
+            Console.WriteLine("-------------");
             LSPDespues();
             Console.WriteLine("-------------");
+
             ISPAntes();
+            Console.WriteLine("-------------");
             ISPDespues();
+            Console.WriteLine("-------------");
+
+            DIPAntes();
+            Console.WriteLine("-------------");
+            DIPDespues();
+            Console.WriteLine("-------------");
         }
 
 
@@ -112,6 +125,41 @@ namespace SolidConsolaEjemplos
             facturaElectronica.Imprimir();
         }
 
+        public static void DIPAntes()
+        { 
+            DIP.Antes.Impresora impresora = new DIP.Antes.Impresora();
+            DIP.Antes.Factura factura = new DIP.Antes.Factura(1, DateTime.Now, 1000);
+            DIP.Antes.NotaCredito notaCredito = new DIP.Antes.NotaCredito(2, DateTime.Now, 2000);
+            DIP.Antes.FacturaLuz facturaLuz = new DIP.Antes.FacturaLuz(3000, "A");
+            DIP.Antes.Municipal municipal = new DIP.Antes.Municipal(2500, "B");
+            DIP.Antes.Remito remito = new DIP.Antes.Remito(1, DateTime.Now, 2);
+            DIP.Antes.ReciboSueldo reciboSueldo = new DIP.Antes.ReciboSueldo(100, "xD");
+
+            impresora.Imprimir(factura);
+            impresora.Imprimir(notaCredito);
+            impresora.Imprimir(facturaLuz);
+            impresora.Imprimir(municipal);
+            impresora.Imprimir(remito);
+            impresora.Imprimir(reciboSueldo);
+        }
+
+        public static void DIPDespues()
+        {
+            DIP.Antes.Impresora impresora = new DIP.Antes.Impresora();
+            DIP.Antes.Factura factura = new DIP.Antes.Factura(1, DateTime.Now, 1000);
+            DIP.Antes.NotaCredito notaCredito = new DIP.Antes.NotaCredito(2, DateTime.Now, 2000);
+            DIP.Antes.FacturaLuz facturaLuz = new DIP.Antes.FacturaLuz(3000, "A");
+            DIP.Antes.Municipal municipal = new DIP.Antes.Municipal(2500, "B");
+            DIP.Antes.Remito remito = new DIP.Antes.Remito(1, DateTime.Now, 2);
+            DIP.Antes.ReciboSueldo reciboSueldo = new DIP.Antes.ReciboSueldo(100, "xD");
+
+            impresora.Imprimir(factura);
+            impresora.Imprimir(notaCredito);
+            impresora.Imprimir(facturaLuz);
+            impresora.Imprimir(municipal);
+            impresora.Imprimir(remito);
+            impresora.Imprimir(reciboSueldo);
+        }
     }
 
 }
